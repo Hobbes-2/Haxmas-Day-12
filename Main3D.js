@@ -15,13 +15,13 @@ renderer.render(scene, camera);
 
 
 const geometry = new THREE.BoxGeometry( 1, 1, 1 );
-const CubeTexture = new THREE.TextureLoader().load('Assets/Blunt.png')
+const CubeTexture = new THREE.TextureLoader().load('/public/Blunt.png')
 const material = new THREE.MeshBasicMaterial( { map: CubeTexture } );
 const cube = new THREE.Mesh( geometry, material );
 scene.add( cube );
 
 const donut_geo = new THREE.TorusGeometry(10, 3, 16, 100);
-const donutTexture = new THREE.TextureLoader().load('Assets/bleeehhh.jpg')
+const donutTexture = new THREE.TextureLoader().load('/public/bleeehhh.jpg')
 const donut_tex = new THREE.MeshBasicMaterial({ map: donutTexture });
 const donut = new THREE.Mesh(donut_geo, donut_tex);
 scene.add(donut);
